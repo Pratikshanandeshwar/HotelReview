@@ -1,0 +1,33 @@
+.exp
+  {
+    margin-right: 5px;
+  }
+  .container
+  {
+  	color: #c72d0d;
+  }
+  .star1
+  {
+      margin-right: 5px;
+      float: left;
+  }
+  .glyphicon
+  {
+    font-size: 30px;
+  }
+  #comment
+  {
+    width: 200px; 
+  min-width:500px; 
+  max-width:500px; 
+
+  height:200px; 
+  min-height:200px;  
+  max-height:200px;
+  }
+  .btn
+  {
+    background-color: #c72d0d; 
+    color: white;
+    font-family: serif;
+  }

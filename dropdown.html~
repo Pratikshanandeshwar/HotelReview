@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Yelp</title>
+  <meta charset="utf-8">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/imagecss.css">
+    <link rel="stylesheet" type="text/css" href="mycss/review1.css">
+    <script src="myjs/starfunction.js"></script>
+    <link rel="stylesheet" type="text/css" href="mycss/review2.css">
+</head>
+<body>
+  <div class="container-fluid">
+<div class="dropdown">
+<input type="text" class="dropdown-toggle" data-toggle="dropdown">
+<ul class="dropdown-menu">
+<li><a href="">1</a></li>
+<li><a href="">2</a></li>
+<li><a href="">3</a></li>
+</ul>
+</div>
+</body>
+</html>

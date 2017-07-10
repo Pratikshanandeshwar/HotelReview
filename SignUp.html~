@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Yelp</title>
+	<meta charset="utf-8">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/imagecss.css">
+<script>
+function ValidationEvent() 
+{
+var password=document.getElementById("password").value;
+var passReg= /^[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+
+//if (password !='') 
+{	 
+ if(password.match(passReg))
+	{
+		alert("valid Password..!!!");
+ 	}
+ 
+ else 
+ {
+	alert("Invalid paaaword...!!!");
+	return false;
+ }
+}
+}
+</script>
+</head>
+   	<body>
+       <img src="images/para1.jpg" style="position: absolute; opacity: 0.6; width: 100%; height:100%">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand"  href="#"> </a>
+                    <a class="navbar-brand" href="#">Yelp</a>
+                </div>
+                <ul class="nav  navbar-nav navbar-right mynav">
+                    <li><a href="Home.html"><span class="glyphicon glyphicon-home"></span>Home</a></li>
+                    <li><a href="review1.html">Review</a></li>
+                    <li><a href="SignUp.html">SignUp</a></li>
+                    <li><a href="Login.html">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container">
+		<div class="col-sm-4 col-md-4 col-xs-4">
+			<div class="Page-header" style="width: 400px; background-color: black; padding: 30px;margin-left: 50px;opacity:0.6">
+			<!--<h1 style="color:white;"><b>SignUp for Yelp</b></h1>-->
+        	<form name="myform" class="form-horizontal" action="SignUp.php" method="POST" onsubmit="return ValidationEvent()">
+          <div class="form-group">
+            <label style="color:white">First name:</label>
+            <input class="form-control input-sm" type="text" name="fname" placeholder="First Name" required><br>
+          <label style="color:white">Last name:</label>
+            <input class="form-control input-sm" type="text" name="lname" placeholder="Last Name" required><br>
+          <label style="color:white">UserName:</label>
+            <input class="form-control input-sm" type="text" name="username" placeholder="UserName" required><br>
+          <label style="color:white">Email ID:</label>
+            <input class="form-control input-sm" type="email" name="email" placeholder="Email ID" required><br>
+            <label style="color:white">Password:</label>
+            <input class="form-control input-sm" type="password" name="password" placeholder="Password" required><br>
+            <label style="color:white">Re-enter Password:</label>
+            <input class="form-control input-sm" type="password" name="repassword" placeholder="Re-Password" required><br>
+            <label style="color:white">Mobile Number:</label>
+            <input class="form-control input-sm" type="text" name="mobileno" placeholder="Mobile Number" required><br>
+            <center><input type="submit" class="btn btn-success btn-lg" value="SignUp"></center>
+	    <div align="right">Already Registered
+	    <a href="Login.html">Login</a> 
+	    </div>
+          </div>
+          </form>
+      		</div>
+		</div>
+		</div>
+
+</body>
+</html>

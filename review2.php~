@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Yelp</title>
+	<meta charset="utf-8">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery-2.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/imagecss.css">
+    <script src="myjs/starfunction.js"></script>
+    <link rel="stylesheet" type="text/css" href="mycss/review2.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/	   zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+<?php
+session_start(); 
+require "init.php";
+$find=$_SESSION['find'];
+$usr=$_SESSION['email'];
+$sql="select * from Review where Find='$find' order by Time desc";
+$result=mysqli_query($con,$sql);
+?>
+</head>
+<body>
+  <div class="container">
+  <div class="row">
+  	
+    	<?php include 'Logoutheader.php';?>
+  		<h2 style="font-family: serif">Write a Review</h2>
+  		<hr>
+  		<div class="col-md-6">
+		<h2 style='color:#c72d0d'><?php echo $find; ?></h2>
+  		<h3 style="color: black;">Your Review</h3>
+    		<h4 style="color: #474747">Select Your Rating</h4>
+  		<form class="form-inline">
+    		<div class="form-group">
+    			<div class="exp">
+    				<div>
+					 <a href="#">
+            <span class="glyphicon glyphicon-star star1" id="1" onmouseover="f11()" onmouseout="f12()" onclick="f13()" value="1"></span></a>
+          <a href="#"><span class="glyphicon glyphicon-star star1" id="2" onmouseover="f21()" onmouseout="f22()" onclick="f23()" value="1"></span></a>
+        <a href="#"><span class="glyphicon glyphicon-star star1" id="3" onmouseover="f31()" onmouseout="f32()" onclick="f33()" value="1"></span></a>
+        <a href="#"><span class="glyphicon glyphicon-star star1" id="4" onmouseover="f41()" onmouseout="f42()" onclick="f43()" value="1"></span></a>
+        <a href="#"><span class="glyphicon glyphicon-star star1" id="5" onmouseover="f51()" onmouseout="f52()" onclick="f53()" value="1"></span></a>
+          </div> 
+	</div>
+				<div>
+    					<textarea class="form-control" id="comment" name="textarea" style="overflow:hidden"></textarea> 
+    				</div>
+    				<p class="action-buttons">
+ 				<br>
+        				<input type="submit" value="SUBMIT" class="btn btn--primary">
+        				<a href="review1.html" class="cancel">Cancel</a>
+    				</p>
+    			</div>
+			</form>
+			</div>
+			<script type=text/javascript>
+			$(document).ready(function(){
+						$('.btn').click(function(){
+							var review=$("#comment").val();	
+							$.ajax({
+								method:"POST",
+								url:"finalreview.php",
+								data:{"review1":review,"star_id":s_id}
+							})
+							.done(function(data){
+								$('.result').html(data);
+							});
+						});
+			});	
+			
+			</script>
+ 	<div class="col-md-6 result">
+ 	<div style="color:green">
+ 	<?php while($row=mysqli_fetch_array($result))
+	{
+		$UserName=$row[0];
+		$Review=$row[2];
+		$Time=$row[3];
+		$count=$row[4];
+ 		echo "<font color='black'>".$UserName."</font>";
+ 		echo "   ";
+ 		echo $Time;
+ 		echo "<br>";
+		echo "<font color='red'>".$Review."</font>";
+		echo "<br>";
+		echo "<br>";
+	}
+	?>
+	</div>
+ 	</div>
+</div>
+</div>
+</body>
+</html>
+ 

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Yelp</title>
+  <meta charset="utf-8">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/imagecss.css">
+    <link rel="stylesheet" type="text/css" href="mycss/review1.css">
+    <script src="myjs/starfunction.js"></script>
+    <link rel="stylesheet" type="text/css" href="mycss/review2.css">
+    <link rel="stylesheet" type="text/css" href="mycss/footer.css">
+</head>
+<body>
+  <div class="container-fluid">
+   <div class="well well-lg" style="height: 300px">
+    <div class="myown-nav-pad">
+      <h2 style="color: #c72d0d"><b>Your First Review Awaits</b></h2>
+      <p><h4>Review your favorite businesses and share your experiences with our community.</h4></p>          
+        <form class="form-inline" action="review1-5.php" method="POST">
+          <div class="form-group">
+           <label for="find">Find:</label>
+            <input list="hotel-find" type="text" class="form-control" style="width: 250px" name="find" placeholder="Hotel Name">
+                <datalist id="hotel-find">
+                  <option value="Season4"/></option>
+                  <option value="Hanuman"/></option>
+                  <option value="Pai-Prakash"/></option>
+                  <option value="Rahamatullah"/></option>
+                  <option value="Iconinn"/></option>
+                  <option value="Mirchi"/></option>
+                  <option value="Ambassadar"/></option>
+                  <option value="Patel"/></option>
+                  <option value="Balle Balle Restaurant"/></option>
+                </datalist>
+          </div>
+
+          <div class="form-group">
+            <label for="near" style="margin-left: -90px">Near:</label>
+            <input type="text" class="form-control" list="hotel-name" style="width: 250px" name="near" placeholder="Near">
+              <datalist id="hotel-name">
+                <option value="Sangli"/></option>
+                <option value="Miraj"/></option>
+              </datalist>
+          </div>
+
+          <button type="submit" class="btn btn-default btn-xs" style="background-color: #c72d0d;font-size: 15px;border-radius: 8px;">
+          <span class="glyphicon glyphicon-search" style="color: black"></span>
+          </button>
+           <img src="260x160_bizhouse_YNRA.png" class="img-rounded" alt="ynra" width="260"> 
+        </form>
+    </div>
+   </div>
+  </div>
+  <div class="container">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width:50%; margin-left:auto; margin-right:auto" >
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+      </ol>
+
+    <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img src="images/photo1.jpg" alt="Chania">
+        </div>
+        <div class="item">
+          <img src="images/photo3.jpg" alt="Flower">
+        </div>
+        <div class="item">
+          <img src="images/photo4.jpg" alt="Flower">
+        </div>
+        <div class="item">
+          <img src="images/photo6.jpg" alt="Flower">
+        </div>
+      </div>
+
+    <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+</div>
+<footer class="footer-distributed" style="background-color:#00897b">
+	<div class="footer-left">
+		<h3 style="font-family: 'Black Ops One', cursive;">YELP</h3>
+		<p style="font-size:20px" class="footer-links">
+        		<a href="#">Home</a>
+		        <a href="developer.php">Developers</a>
+		</p>
+		<p style="font-size:20px;color:white">YELP &copy; 2017</p>
+		<br>
+	</div>		
+	<div class="footer-center">
+		<div>
+			<i class="fa fa-map-marker"></i>
+			<p style="font-size:20px">Walchand College Of Engineering<span>Sangli 416 415</span></p>
+		</div>
+		<div>
+			<i class="fa fa-phone"></i>
+			<p style="font-size:20px">9503023005</p>
+		</div>
+		<div>
+			<i class="fa fa-envelope"></i>
+			<p style="font-size:20px"><a href="mailto:yelp@gmail.com" style="color:white">yelp@gmail.com</a></p>
+		</div>
+                                 
+	</div>
+	<div class="footer-right">
+		<p class="footer-company-about" style="color:white">
+			<span style="font-size:20px"><b>About YELP</b></span>OUR PROJECT IN IAWP HOTEL REVIEW SYSTEM 
+		</p>
+		<div class="footer-icons">
+			<a  href="https://www.facebook.com/"><span style="margin-left: 0;margin-top:5px"class="fa fa-facebook"></i></a>
+			<a href="https://twitter.com"><i style="margin-left: 0;margin-top:5px" class="fa fa-twitter"></i></a>
+		</div>
+
+	</div>
+	</footer>
+</body>
+</html>

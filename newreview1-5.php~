@@ -1,0 +1,30 @@
+<?php 
+session_start(); 
+require "init.php";
+  	$rr="";
+  	$add="";
+  	$phoneno="";
+  	$find=$_POST["find"];
+	$near= $_POST["near"];
+  	$_SESSION['find']=$find;
+ 	$sql="select * from Review1 where find='$find' and near='$near'";
+  	$result=mysqli_query($con,$sql);
+	$cnt=0;
+	$res=0;
+  	$cnt=mysqli_num_rows($result);
+  	if($cnt==0)
+  	{
+     		echo "not available";
+  	}
+ 	else
+  	{
+		header('Location: review1-5.php');
+ 		$res=mysqli_fetch_row($result);
+     		$rr=$res[0];
+     		//echo $rr;
+     		$lat=$res[2];
+     		$lon=$res[3];
+     		$add=$res[5];
+     		$phoneno=$res[4];
+  	}
+?>

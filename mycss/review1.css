@@ -1,0 +1,50 @@
+.myown-nav-pad
+  {
+		padding-top: 10x;
+    text-align: center;
+
+	}
+  .img-rounded
+  {
+     position: absolute;
+     right: 0px; 
+     margin-top: -70px;
+  }
+  .form-group
+  {
+    padding: 50px 30px 50px 80px;
+  }
+  .well
+  {
+    background-color: #f9c0c6;
+  }
+  .carousel-inner > .item > img
+  {
+       width:600px;
+       height:345px;
+  }
+.gallery
+{
+    display:inline-block
+}
+.gallery >img
+{
+    float: left;
+    margin: 10px;
+    width: 178px;
+    height: 165px;
+    
+     transition: all 2s ;
+}
+.gallery >img:hover
+{
+    opacity:0.8;
+    filter: alpha(opacity=40);
+   // -webkit-transform: translate3d(1,1,1);
+    transform: scale(1.2);
+}
+/*.bg
+{
+  background: url("images/bg.jpg") center center cover no-repeat fixed;
+}*/
+}
